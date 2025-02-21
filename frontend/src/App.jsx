@@ -7,7 +7,7 @@ function App() {
   return (
     <BrowserRouter>
     <Routes>
-      <Route path="/login" element={<LoginPage />} />
+      <Route path="/" element={<LoginPage />} />
       <Route path="/signup" element={<SignupPage />} />
  
     </Routes>
@@ -17,4 +17,4 @@ function App() {
 }
  
 export default App;
- 
+  
