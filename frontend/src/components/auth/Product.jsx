@@ -8,7 +8,7 @@ const Product = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get("http://localhost:5000/products")
+        axios.get("http://localhost:8000/products")
             .then((response) => {
                 if (Array.isArray(response.data)) {
                     setProducts(response.data);
@@ -24,7 +24,7 @@ const Product = () => {
     // Function to handle delete
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/products/${id}`);
+            await axios.delete(`http://localhost:8000/products/${id}`);
             setProducts(products.filter(product => product._id !== id)); // Update UI
         } catch (error) {
             console.error("Error deleting product:", error);
@@ -44,7 +44,7 @@ const Product = () => {
                             id={product._id}
                             name={product.name}
                             price={product.price}
-                            image={`http://localhost:5000/uploads/${product.images?.[0]}`}
+                            image={`http://localhost:8000/uploads/${product.images?.[0]}`}
                             onAddToCart={() => console.log("Added to cart:", product.name)}
                             onBuyNow={() => console.log("Buying:", product.name)}
                             onEdit={() => navigate(`/edit-product/${product._id}`)}
