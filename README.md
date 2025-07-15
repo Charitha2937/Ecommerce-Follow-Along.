@@ -294,3 +294,147 @@ Create an order confirmation page as part of the frontend where the user can:
 2. **Show Delivery Address**: The address selected by the user for delivery is displayed prominently.
 3. **Cart Total**: The total value of all items in the cart is calculated and shown to the user.
 4. **Place Order Button**: A button at the bottom of the page allows users to finalize their order.
+
+Milestone 25: Backend Endpoint for Placing Orders 🌟
+Learning Goals 🎯
+By completing this milestone, we aim to:
+
+Create a backend endpoint to help in placing orders.
+Enhance skills in handling and storing user-specific data in MongoDB.
+Task Steps 📝
+Endpoint Creation:
+
+Developed an API endpoint that accepts products, user details, and address information.
+Retrieve User ID:
+
+Used the user's email to fetch their _id from the database.
+Store Orders:
+
+Created separate orders for each product using the same address.
+Stored order details in the MongoDB order collection using the pre-existing order schema.
+Completion:
+
+Successfully implemented an endpoint to handle order placement efficiently.
+Milestone 26: Create Backend Endpoint for Place Order 🌟
+Learning Goals 🎯
+By completing this milestone, we have achieved:
+
+Developed a backend endpoint to retrieve all orders for a specific user.
+Enhanced our understanding of handling user-specific data in backend systems.
+Steps Implemented 📝
+Endpoint Creation:
+
+Built an API endpoint that accepts the user's email as input.
+Retrieve User ID:
+
+Fetched the _id of the user using the provided email from the database.
+Fetch Orders:
+
+Queried the database to get all the orders associated with the retrieved _id.
+Response:
+
+Sent the retrieved orders in the response.
+Milestone 27: My Orders Page
+Overview
+In this milestone, we created a frontend page to display all the user orders. This implementation improves navigation and provides users with a seamless way to view their order details.
+
+Features
+My Orders Page: A dedicated page for displaying all user orders.
+API Integration: Sends a GET request to the my-orders endpoint to fetch user order data.
+Navbar Integration: Added a link to the navbar for easier navigation to the my-orders page.
+Steps Implemented
+Created the My Orders Page:
+
+Designed a new frontend page to showcase user order details.
+API Request:
+
+Configured a GET request to the my-orders endpoint.
+Passed the user's email as a parameter to fetch their orders.
+Data Display:
+
+Rendered all retrieved orders dynamically on the my-orders page.
+Navbar Update:
+
+Added a link to the my-orders page in the navbar for better accessibility.
+Milestone 28: Cancel Orders Feature
+Overview
+Cancel placed orders through the "My Orders" page.
+Frontend
+Add a Cancel Order Button:
+In the "My Orders" page, add a Cancel Order button for every order listed.
+Ensure the cancel button is not displayed if the order is already canceled.
+Backend
+Create a New Endpoint:
+Create an endpoint to handle the cancelation of orders.
+The endpoint will:
+Accept the order-id as input.
+Fetch the order based on the provided ID.
+Update the order's status to canceled.
+Save the updated order.
+Milestone 29: Integrate Online Payments with PayPal API
+Overview
+Learn how to use the PayPal API.
+Understand how to integrate online payment gateways into your application.
+Steps for Implementation
+1. Set Up PayPal Sandbox Account
+Create a PayPal account using the PayPal Developer Dashboard.
+Log in and navigate to Sandbox Accounts.
+Copy the UserID of the sandbox account and save it for later use.
+Locate the Client ID in the sandbox account and save it securely.
+2. Update the Order Confirmation Page
+In your application’s Order Confirmation Page, include two payment options:
+Cash on Delivery (COD)
+Online Payment
+Add radio buttons for users to select between these payment methods.
+3. Display PayPal Buttons
+When the Online Payment option is selected, dynamically display the PayPal buttons.
+The PayPal buttons will be integrated in the next milestone.
+Milestone 30: Online Payment Integration with PayPal API
+Overview
+This repository contains the implementation of the online payment gateway using the PayPal API as part of Milestone 30 in the Full Stack Web Development course. The goal was to understand and integrate online payments into a web application using ReactJS.
+
+Features
+PayPal API integration for online payments.
+Implementation of secure payment methods such as credit and debit cards.
+Usage of the react-paypal-js package for seamless PayPal integration.
+Milestone 32: Adding Mail to Global State with Redux
+Project Overview
+This milestone focuses on using Redux to manage the global state in our application. Specifically, we've stored the user's email in the global state and made it accessible across all pages.
+
+Learning Goals
+By completing this milestone, we aimed to:
+
+Understand and implement global state management with Redux.
+Dispatch and store the user's email from the Login page.
+Access the stored email in all other pages using useSelector.
+Key Features
+Login Page Functionality:
+Integrated Redux Dispatch to store the user's email in the global state.
+Global State Access:
+Implemented useSelector across remaining pages to access the stored email.
+Code Highlights
+Redux Store
+We set up a global Redux store to manage state.
+
+Dispatch in Login Page
+Captured the user's email and stored it in the global state using dispatch.
+useSelector in Other Pages
+Accessed the stored email from the global state in the rest of the pages.
+Milestone 33: Creating JWT Tokens and Storing in Cookies
+Project Overview
+In this milestone, we learned how to create a JWT token and store it in a browser cookie for secure and persistent session management.
+
+Learning Goals
+Understand how to create a JWT token.
+Learn how to store tokens securely inside cookies.
+Key Features
+Steps Implemented:
+JWT Token Creation:
+
+Installed the jsonwebtoken package using NPM.
+Used the sign method to create a JWT token containing user email and ID.
+Defined an expiration time for the token by setting maxAge.
+Storing Cookies:
+
+Added the cookie with the JWT token into the response object, enabling storage in the browser.
+   
